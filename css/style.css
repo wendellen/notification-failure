@@ -1,0 +1,13 @@
+
+
+
+.notification {
+  width: 500px;
+  height: 500px;
+  background-color: none;
+  position: absolute;
+  transition-property: all;
+  transition-duration: 1s;
+
+  -vendor-animation-duration: 5s; /*come back to this*/
+}
