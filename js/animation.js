@@ -51,7 +51,7 @@ function makeInverted(){
 }
 
 function intro(){
-  var introTimer = setInterval(makeNotification, 472*8)
+  var introTimer = setInterval(makeNotification, 3776)
   setTimeout( function(){
     clearInterval( introTimer )
 
@@ -61,7 +61,7 @@ function intro(){
 }
 
 function popUp(){
-  var popTimer = setInterval(makeNotification, 472*4)
+  var popTimer = setInterval(makeNotification, 1884)
   setTimeout( function(){
     clearInterval( popTimer )
 
@@ -71,7 +71,7 @@ function popUp(){
 }
 
 function popUp2(){
-  var popTimer = setInterval(makeNotification, 472/4)
+  var popTimer = setInterval(makeNotification, 118)
   setTimeout( function(){
     clearInterval( popTimer )
 
@@ -111,7 +111,7 @@ function goBlack(){
     var notifications = $('.notificationInverted')
     var notification = notifications.eq( Math.round(Math.random()* (notifications.length-1)) )
     notification.css('filter', 'brightness(0)')
-  }, 472/32)
+  }, 20)
 
   setTimeout( function(){
     clearInterval( blackTimer )
