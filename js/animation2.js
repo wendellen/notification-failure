@@ -14,23 +14,6 @@ $.fn.extend({
 var assetIndex = 0
 var assets = ['0.png', '1.png', '2.png', '3.png', '5.png', '6.png']
 
-function makeNotification(){
-
-  $("<div class='notification'>")
-    .css({
-      left: window.innerWidth*Math.random()-200,
-      top: window.innerHeight*Math.random()-200,
-      'background-image': "url(assets/" + assets[assetIndex % assets.length] + ")",
-      'background-repeat': 'no-repeat',
-      'cursor': 'none'
-
-    })
-    .appendTo("body")
-    .animateCss('zoomIn')
-
-    assetIndex += 1
-
-}
 
 function makeInverted(){
 
@@ -49,36 +32,6 @@ function makeInverted(){
 
     assetIndex += 1
 
-}
-
-function intro(){
-  var introTimer = setInterval(makeNotification, 3776)
-  setTimeout( function(){
-    clearInterval( introTimer )
-
-    setTimeout(popUp, 1)
-
-  }, 30000)
-}
-
-function popUp(){
-  var popTimer = setInterval(makeNotification, 1884)
-  setTimeout( function(){
-    clearInterval( popTimer )
-
-    setTimeout(popUp2, 1)
-
-  }, 30000)
-}
-
-function popUp2(){
-  var popTimer = setInterval(makeNotification, 118)
-  setTimeout( function(){
-    clearInterval( popTimer )
-
-    setTimeout(changeColor, 1)
-
-  }, 22000)
 }
 
 function changeColor(){
@@ -102,7 +55,7 @@ function rotate(){
 
   setTimeout( function(){
     clearInterval( rotateTimer )
-    setTimeout( goBlack, 1)
+    setTimeout( goBlack, 60)
   }, 30000)
 }
 
@@ -121,4 +74,4 @@ function goBlack(){
   // $('.notification').css('filter', 'brightness(0)')
 }
 
-intro()
+changeColor()
