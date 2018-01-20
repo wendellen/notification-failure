@@ -1,10 +1,7 @@
-html {
-  width: 90vw;
-  height: 90vh;
-}
 
 body {
   background-color: black;
+  overflow: hidden;
 }
 
 .notification {
